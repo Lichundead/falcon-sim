@@ -1,0 +1,69 @@
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+src/v1.1-corregida/channel_file.c:53:10: warning: Call to function 'sscanf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sscanf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   53 |         (sscanf(line, "#template=%15s fields=%d", cf->template_name,
+      |          ^~~~~~
+src/v1.1-corregida/channel_file.c:53:10: note: Call to function 'sscanf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sscanf_s' in case of C11
+   53 |         (sscanf(line, "#template=%15s fields=%d", cf->template_name,
+      |          ^~~~~~
+1 warning and 1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+src/v1.1-corregida/main.c:132:15: warning: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  132 |         (void)fprintf(stderr, "uso: %s info|validate|run <channel_file> [opciones]\n", argv[0]);
+      |               ^~~~~~~
+src/v1.1-corregida/main.c:132:15: note: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+  132 |         (void)fprintf(stderr, "uso: %s info|validate|run <channel_file> [opciones]\n", argv[0]);
+      |               ^~~~~~~
+src/v1.1-corregida/main.c:134:15: warning: Call to function 'fprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  134 |         (void)fprintf(stderr, "opción inválida\n");
+      |               ^~~~~~~
+src/v1.1-corregida/main.c:134:15: note: Call to function 'fprintf' is insecure as it does not provide security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+  134 |         (void)fprintf(stderr, "opción inválida\n");
+      |               ^~~~~~~
+src/v1.1-corregida/main.c:138:19: warning: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+  138 |             (void)fprintf(stderr, "no se pudo cargar %s\n", argv[2]);
+      |                   ^~~~~~~
+src/v1.1-corregida/main.c:138:19: note: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+  138 |             (void)fprintf(stderr, "no se pudo cargar %s\n", argv[2]);
+      |                   ^~~~~~~
+3 warnings and 1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+src/v1.1-corregida/sensor_events.c:25:30: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   25 |     ev->seq = (unsigned long)rand();
+      |                              ^~~~
+src/v1.1-corregida/sensor_events.c:25:30: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   25 |     ev->seq = (unsigned long)rand();
+      |                              ^~~~
+src/v1.1-corregida/sensor_events.c:26:70: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   26 |     (void)snprintf(ev->pipe_name, sizeof(ev->pipe_name), "%s", PIPES[rand() % 4]);
+      |                                                                      ^~~~
+src/v1.1-corregida/sensor_events.c:26:70: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   26 |     (void)snprintf(ev->pipe_name, sizeof(ev->pipe_name), "%s", PIPES[rand() % 4]);
+      |                                                                      ^~~~
+src/v1.1-corregida/sensor_events.c:27:66: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   27 |     (void)snprintf(ev->process, sizeof(ev->process), "%s", PROCS[rand() % 4]);
+      |                                                                  ^~~~
+src/v1.1-corregida/sensor_events.c:27:66: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   27 |     (void)snprintf(ev->process, sizeof(ev->process), "%s", PROCS[rand() % 4]);
+      |                                                                  ^~~~
+src/v1.1-corregida/sensor_events.c:28:58: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   28 |     (void)snprintf(ev->user, sizeof(ev->user), "user%d", rand() % 100);
+      |                                                          ^~~~
+src/v1.1-corregida/sensor_events.c:28:58: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   28 |     (void)snprintf(ev->user, sizeof(ev->user), "user%d", rand() % 100);
+      |                                                          ^~~~
+src/v1.1-corregida/sensor_events.c:30:81: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   30 |         (void)snprintf(ev->fields[i], sizeof(ev->fields[i]), "v%02d_%d", i + 1, rand() % 10);
+      |                                                                                 ^~~~
+src/v1.1-corregida/sensor_events.c:30:81: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   30 |         (void)snprintf(ev->fields[i], sizeof(ev->fields[i]), "v%02d_%d", i + 1, rand() % 10);
+      |                                                                                 ^~~~
+5 warnings and 1 error generated.

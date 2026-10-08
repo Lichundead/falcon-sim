@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.22.0"/>
+    <errors>
+        <error id="invalidscanf" severity="warning" msg="sscanf() without field width limits can crash with huge input data." verbose="sscanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.\012\012Sample program that can crash:\012\012#include &lt;stdio.h&gt;\012int main()\012{\012    char c[5];\012    scanf(&quot;%s&quot;, c);\012    return 0;\012}\012\012Typing in 5 or more characters may make the program crash. The correct usage here is &apos;scanf(&quot;%4s&quot;, c);&apos;, as the maximum field width does not include the terminating null byte.\012Source: http://linux.die.net/man/3/scanf\012Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119" hash="16185482092318790547" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="42" column="9"/>
+        </error>
+        <error id="resourceLeak" severity="error" msg="Resource leak: f" verbose="Resource leak: f" cwe="775" hash="5311193264005505520" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="41" column="9"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: cf" verbose="Memory leak: cf" cwe="401" hash="15603615713845820795" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="41" column="9"/>
+            <symbol>cf</symbol>
+        </error>
+        <error id="resourceLeak" severity="error" msg="Resource leak: f" verbose="Resource leak: f" cwe="775" hash="4919420684092150152" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="44" column="9"/>
+            <symbol>f</symbol>
+        </error>
+        <error id="memleak" severity="error" msg="Memory leak: cf" verbose="Memory leak: cf" cwe="401" hash="15211843133932465427" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="44" column="9"/>
+            <symbol>cf</symbol>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: cf" verbose="If memory allocation fails, then there is a possible null pointer dereference: cf" cwe="476" hash="10027904347680134707" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="38" column="12" info="Null pointer dereference"/>
+            <location file="src/v1.0-incidente/channel_file.c" line="37" column="16" info="Assignment &apos;cf=malloc(sizeof(struct channel_file_t))&apos;, assigned value is 0"/>
+            <location file="src/v1.0-incidente/channel_file.c" line="37" column="16" info="Assuming allocation function fails"/>
+            <symbol>cf</symbol>
+        </error>
+        <error id="nullPointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: cf" verbose="If memory allocation fails, then there is a possible null pointer dereference: cf" cwe="476" hash="3952916139360259059" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="42" column="48" info="Null pointer dereference"/>
+            <location file="src/v1.0-incidente/channel_file.c" line="40" column="38" info="Assuming condition is false"/>
+            <location file="src/v1.0-incidente/channel_file.c" line="37" column="16" info="Assignment &apos;cf=malloc(sizeof(struct channel_file_t))&apos;, assigned value is 0"/>
+            <location file="src/v1.0-incidente/channel_file.c" line="37" column="16" info="Assuming allocation function fails"/>
+            <symbol>cf</symbol>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &apos;tok&apos; can be declared as pointer to const" verbose="Variable &apos;tok&apos; can be declared as pointer to const" cwe="398" hash="17210578131148760623" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="14" column="11" info="Variable &apos;tok&apos; can be declared as pointer to const"/>
+            <symbol>tok</symbol>
+        </error>
+        <error id="misra-c2012-11.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="37" column="8"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="47" column="28"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="35" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="41" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="44" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="21" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="34" column="5"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="40" column="5"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="42" column="5"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="47" column="9"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="17" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="23" column="15"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="38" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="52" column="11"/>
+        </error>
+        <error id="misra-c2012-21.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="37" column="16"/>
+        </error>
+        <error id="misra-c2012-21.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="58" column="9"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="31" column="20"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="40" column="14"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="42" column="15"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="46" column="17"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/channel_file.c">
+            <location file="src/v1.0-incidente/channel_file.c" line="52" column="11"/>
+        </error>
+        <error id="misra-c2012-2.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="35" column="69"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="15" column="11"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="15" column="28"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="16" column="42"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="15" column="15"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="37" column="10"/>
+        </error>
+        <error id="misra-c2012-14.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="40" column="12"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="16" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="29" column="13"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="15" column="5"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="26" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="28" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_interpreter.c">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="40" column="9"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="26" column="43"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="13" column="10"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="23" column="13"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="28" column="17"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="20" column="20"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="22" column="19"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="27" column="24"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="20" column="20"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/content_validator.c">
+            <location file="src/v1.0-incidente/content_validator.c" line="27" column="24"/>
+        </error>
+        <error id="misra-c2012-7.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="42" column="24"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="91" column="23"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="18" column="10"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="55" column="10"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="79" column="10"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="79" column="14"/>
+        </error>
+        <error id="misra-c2012-12.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="79" column="28"/>
+        </error>
+        <error id="misra-c2012-14.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="44" column="8"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="46" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="84" column="9"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="89" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="92" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="94" column="14"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="96" column="14"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="100" column="5"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="102" column="10"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="104" column="10"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="106" column="5"/>
+        </error>
+        <error id="misra-c2012-15.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="97" column="41"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="20" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="26" column="15"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="30" column="23"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="34" column="15"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="36" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="45" column="15"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="48" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="62" column="32"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="68" column="32"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="72" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="83" column="16"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="88" column="16"/>
+        </error>
+        <error id="misra-c2012-21.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="61" column="41"/>
+        </error>
+        <error id="misra-c2012-21.3" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="64" column="17"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="20" column="11"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="26" column="15"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="30" column="23"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="34" column="15"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="36" column="11"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="45" column="15"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="48" column="11"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="72" column="11"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="83" column="16"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="88" column="16"/>
+        </error>
+        <error id="misra-c2012-21.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="93" column="26"/>
+        </error>
+        <error id="misra-c2012-21.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="95" column="38"/>
+        </error>
+        <error id="misra-c2012-21.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/main.c">
+            <location file="src/v1.0-incidente/main.c" line="97" column="28"/>
+        </error>
+        <error id="misra-c2012-8.9" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="10" column="20"/>
+        </error>
+        <error id="misra-c2012-8.9" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="12" column="20"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="45" column="11"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="45" column="28"/>
+        </error>
+        <error id="misra-c2012-10.4" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="46" column="42"/>
+        </error>
+        <error id="misra-c2012-12.1" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="45" column="15"/>
+        </error>
+        <error id="misra-c2012-15.5" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="46" column="9"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="25" column="5"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="36" column="5"/>
+        </error>
+        <error id="misra-c2012-15.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="45" column="5"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="20" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="22" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="23" column="11"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="24" column="12"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="26" column="16"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="60" column="12"/>
+        </error>
+        <error id="misra-c2012-17.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="61" column="12"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="24" column="12"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="26" column="16"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="60" column="12"/>
+        </error>
+        <error id="misra-c2012-21.6" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="61" column="12"/>
+        </error>
+        <error id="ctunullpointerOutOfMemory" severity="warning" msg="If memory allocation fails, then there is a possible null pointer dereference: values" verbose="If memory allocation fails, then there is a possible null pointer dereference: values" cwe="476" hash="12107698778218747075" file0="src/v1.0-incidente/sensor_events.c">
+            <location file="src/v1.0-incidente/sensor_events.c" line="33" column="5" info="Dereferencing argument values that is null"/>
+            <location file="src/v1.0-incidente/main.c" line="62" column="32" info="Calling function sensor_build_inputs, 2nd argument is null"/>
+            <location file="src/v1.0-incidente/main.c" line="61" column="41" info="Assignment &apos;values=malloc(sizeof(char*)*(unsigned long)n_inputs)&apos;, assigned value is 0"/>
+            <location file="src/v1.0-incidente/main.c" line="61" column="41" info="Assuming allocation function fails"/>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;sensor_filter&apos; is never used." verbose="The function &apos;sensor_filter&apos; is never used." cwe="561" hash="11330546035682529153">
+            <location file="src/v1.0-incidente/sensor_events.c" line="50" column="5"/>
+            <symbol>sensor_filter</symbol>
+        </error>
+        <error id="unusedFunction" severity="style" msg="The function &apos;sensor_log_event&apos; is never used." verbose="The function &apos;sensor_log_event&apos; is never used." cwe="561" hash="8703201337804659474">
+            <location file="src/v1.0-incidente/sensor_events.c" line="56" column="6"/>
+            <symbol>sensor_log_event</symbol>
+        </error>
+        <error id="misra-c2012-5.9" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)">
+            <location file="src/v1.0-incidente/sensor_events.c" line="41" column="12"/>
+        </error>
+        <error id="misra-c2012-5.9" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)">
+            <location file="src/v1.0-incidente/content_interpreter.c" line="11" column="12"/>
+        </error>
+        <error id="misra-c2012-8.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)">
+            <location file="src/v1.0-incidente/sensor_events.c" line="50" column="5"/>
+        </error>
+        <error id="misra-c2012-8.7" severity="style" msg="misra violation (use --rule-texts=&lt;file&gt; to get proper output)" verbose="misra violation (use --rule-texts=&lt;file&gt; to get proper output)">
+            <location file="src/v1.0-incidente/sensor_events.c" line="56" column="6"/>
+        </error>
+        <error id="checkersReport" severity="information" msg="Active checkers: 276/389 (use --checkers-report=&lt;filename&gt; to see details)" verbose="Active checkers: 276/389 (use --checkers-report=&lt;filename&gt; to see details)"/>
+    </errors>
+</results>

@@ -1,0 +1,4 @@
+#template=IPC fields=21
+# Escenario B: instancias anteriores al 19/07/2024 (comodín en campo 21)
+IPC-001|\\.\pipe\spoolss|svchost.exe|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*
+IPC-002|\\.\pipe\msagent_*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|v20_*|*

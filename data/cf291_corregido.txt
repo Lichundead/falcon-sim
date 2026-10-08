@@ -1,0 +1,5 @@
+#template=IPC fields=21
+# Escenario C: IPC-003 corregida (comodín en campo 21)
+IPC-001|\\.\pipe\spoolss|svchost.exe|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*
+IPC-002|\\.\pipe\msagent_*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|v20_*|*
+IPC-003|\\.\pipe\*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*

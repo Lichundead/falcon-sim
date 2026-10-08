@@ -1,0 +1,48 @@
+herramienta,regla,severidad_herramienta,severidad,categoria,archivo,linea,cwe,mensaje,nota
+Cppcheck,arrayIndexOutOfBoundsCond,warning,Alto,Seguridad,src/v1.1-corregida/content_validator.c,26,788,"Either the condition 'j>=21' is redundant or the array 'inst->criteria[21][64]' is accessed at index 21, which is out of bounds.",
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,52,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,53,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,56,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,73,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.3,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,76,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.3,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,78,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,81,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.3,style,Medio,Codificación,src/v1.1-corregida/channel_file.c,88,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/content_validator.c,18,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/content_validator.c,24,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/content_validator.c,27,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/content_validator.c,43,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,22,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,28,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,32,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,36,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,38,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-7.4,style,Medio,Codificación,src/v1.1-corregida/main.c,44,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,48,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,51,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.3,style,Medio,Codificación,src/v1.1-corregida/main.c,62,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.3,style,Medio,Codificación,src/v1.1-corregida/main.c,66,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,87,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-22.8,style,Medio,Codificación,src/v1.1-corregida/main.c,94,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-22.9,style,Medio,Codificación,src/v1.1-corregida/main.c,94,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,132,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,134,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/main.c,138,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/sensor_events.c,26,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/sensor_events.c,27,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/sensor_events.c,28,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-21.6,style,Medio,Codificación,src/v1.1-corregida/sensor_events.c,30,,misra violation (use --rule-texts=<file> to get proper output),
+Clang SA,security.insecureAPI.DeprecatedOrUnsafeBufferHandling,warning,Bajo,Seguridad,src/v1.1-corregida/channel_file.c,53,,Call to function 'sscanf' is insecure as it does not provide security checks introduced in the C11 standard,posible falso positivo: printf/sscanf con formato fijo
+Cppcheck,misra-c2012-11.5,style,Bajo,Codificación,src/v1.1-corregida/channel_file.c,76,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,variableScope,style,Bajo,Mantenibilidad,src/v1.1-corregida/main.c,125,398,The scope of the variable 'cf' can be reduced.,
+Clang SA,security.insecureAPI.DeprecatedOrUnsafeBufferHandling,warning,Bajo,Seguridad,src/v1.1-corregida/main.c,132,,Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard,posible falso positivo: printf/sscanf con formato fijo
+Clang SA,security.insecureAPI.DeprecatedOrUnsafeBufferHandling,warning,Bajo,Seguridad,src/v1.1-corregida/main.c,134,,Call to function 'fprintf' is insecure as it does not provide security checks introduced in the C11 standard,posible falso positivo: printf/sscanf con formato fijo
+Clang SA,security.insecureAPI.DeprecatedOrUnsafeBufferHandling,warning,Bajo,Seguridad,src/v1.1-corregida/main.c,138,,Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard,posible falso positivo: printf/sscanf con formato fijo
+Cppcheck,misra-c2012-8.9,style,Bajo,Codificación,src/v1.1-corregida/sensor_events.c,14,,misra violation (use --rule-texts=<file> to get proper output),
+Cppcheck,misra-c2012-8.9,style,Bajo,Codificación,src/v1.1-corregida/sensor_events.c,16,,misra violation (use --rule-texts=<file> to get proper output),
+Clang SA,security.insecureAPI.rand,warning,Bajo,Seguridad,src/v1.1-corregida/sensor_events.c,25,,Function 'rand' is obsolete because it implements a poor random number generator,falso positivo en contexto: rand() solo genera eventos de prueba
+Clang SA,security.insecureAPI.rand,warning,Bajo,Seguridad,src/v1.1-corregida/sensor_events.c,26,,Function 'rand' is obsolete because it implements a poor random number generator,falso positivo en contexto: rand() solo genera eventos de prueba
+Clang SA,security.insecureAPI.rand,warning,Bajo,Seguridad,src/v1.1-corregida/sensor_events.c,27,,Function 'rand' is obsolete because it implements a poor random number generator,falso positivo en contexto: rand() solo genera eventos de prueba
+Clang SA,security.insecureAPI.rand,warning,Bajo,Seguridad,src/v1.1-corregida/sensor_events.c,28,,Function 'rand' is obsolete because it implements a poor random number generator,falso positivo en contexto: rand() solo genera eventos de prueba
+Clang SA,security.insecureAPI.rand,warning,Bajo,Seguridad,src/v1.1-corregida/sensor_events.c,30,,Function 'rand' is obsolete because it implements a poor random number generator,falso positivo en contexto: rand() solo genera eventos de prueba
+Cppcheck,variableScope,style,Bajo,Mantenibilidad,src/v1.1-corregida/sensor_events.c,36,398,The scope of the variable 'i' can be reduced.,

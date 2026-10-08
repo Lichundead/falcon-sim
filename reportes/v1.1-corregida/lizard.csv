@@ -1,0 +1,19 @@
+11,5,90,2,12,"pattern_match@12-23@src/v1.1-corregida/content_interpreter.c","src/v1.1-corregida/content_interpreter.c","pattern_match","pattern_match( const char * pattern , const char * value)",12,23
+15,6,116,2,16,"match_instance@25-40@src/v1.1-corregida/content_interpreter.c","src/v1.1-corregida/content_interpreter.c","match_instance","match_instance( const template_instance_t * inst , const char * values [ ] , int n_values)",25,40
+11,3,71,2,12,"ci_evaluate@42-53@src/v1.1-corregida/content_interpreter.c","src/v1.1-corregida/content_interpreter.c","ci_evaluate","ci_evaluate( const channel_file_t * cf , const char * values [ ] , int n_values)",42,53
+23,7,185,4,25,"validate_instance@11-35@src/v1.1-corregida/content_validator.c","src/v1.1-corregida/content_validator.c","validate_instance","validate_instance( const template_instance_t * inst , int declared , char * reason , size_t size)",11,35
+14,4,105,3,15,"cv_validate@37-51@src/v1.1-corregida/content_validator.c","src/v1.1-corregida/content_validator.c","cv_validate","cv_validate( const channel_file_t * cf , char * reason , size_t size)",37,51
+12,3,66,3,13,"copy_field@14-26@src/v1.1-corregida/channel_file.c","src/v1.1-corregida/channel_file.c","copy_field","copy_field( char * dst , size_t size , const char * src)",14,26
+17,5,120,2,18,"split_criteria@28-45@src/v1.1-corregida/channel_file.c","src/v1.1-corregida/channel_file.c","split_criteria","split_criteria( char * line , template_instance_t * inst)",28,45
+21,8,163,2,22,"load_body@47-68@src/v1.1-corregida/channel_file.c","src/v1.1-corregida/channel_file.c","load_body","load_body( FILE * f , channel_file_t * cf)",47,68
+14,4,87,1,15,"cf_load@70-84@src/v1.1-corregida/channel_file.c","src/v1.1-corregida/channel_file.c","cf_load","cf_load( const char * path)",70,84
+4,1,13,1,4,"cf_free@86-89@src/v1.1-corregida/channel_file.c","src/v1.1-corregida/channel_file.c","cf_free","cf_free( channel_file_t * cf)",86,89
+22,6,174,1,24,"cmd_info@17-40@src/v1.1-corregida/main.c","src/v1.1-corregida/main.c","cmd_info","cmd_info( const channel_file_t * cf)",17,40
+12,2,68,1,13,"cmd_validate@42-54@src/v1.1-corregida/main.c","src/v1.1-corregida/main.c","cmd_validate","cmd_validate( const channel_file_t * cf)",42,54
+17,3,126,3,20,"run_event@56-75@src/v1.1-corregida/main.c","src/v1.1-corregida/main.c","run_event","run_event( const channel_file_t * cf , const ipc_event_t * ev , int n_inputs)",56,75
+12,2,86,4,13,"cmd_run@77-89@src/v1.1-corregida/main.c","src/v1.1-corregida/main.c","cmd_run","cmd_run( const channel_file_t * cf , int events , unsigned int seed , int n_inputs)",77,89
+11,5,84,4,12,"parse_int@91-102@src/v1.1-corregida/main.c","src/v1.1-corregida/main.c","parse_int","parse_int( const char * s , long min , long max , long * out)",91,102
+17,6,176,5,18,"parse_options@104-121@src/v1.1-corregida/main.c","src/v1.1-corregida/main.c","parse_options","parse_options( int argc , char ** argv , long * events , long * seed , long * n_inputs)",104,121
+28,7,232,2,29,"main@123-151@src/v1.1-corregida/main.c","src/v1.1-corregida/main.c","main","main( int argc , char ** argv)",123,151
+13,2,179,2,14,"sensor_synthetic_event@19-32@src/v1.1-corregida/sensor_events.c","src/v1.1-corregida/sensor_events.c","sensor_synthetic_event","sensor_synthetic_event( ipc_event_t * ev , unsigned int seed)",19,32
+16,4,107,2,17,"sensor_build_inputs@34-50@src/v1.1-corregida/sensor_events.c","src/v1.1-corregida/sensor_events.c","sensor_build_inputs","sensor_build_inputs( const ipc_event_t * ev , const char * values [ ] , int n)",34,50

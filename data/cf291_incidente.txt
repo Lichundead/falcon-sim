@@ -1,0 +1,5 @@
+#template=IPC fields=21
+# Escenario A: contenido publicado el 19/07/2024 (IPC-003 usa el campo 21)
+IPC-001|\\.\pipe\spoolss|svchost.exe|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*
+IPC-002|\\.\pipe\msagent_*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|v20_*|*
+IPC-003|\\.\pipe\*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|*|v21_*

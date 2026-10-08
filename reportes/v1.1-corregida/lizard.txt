@@ -1,0 +1,46 @@
+================================================
+  NLOC    CCN   token  PARAM  length  location  
+------------------------------------------------
+      11      5     90      2      12 pattern_match@12-23@src/v1.1-corregida/content_interpreter.c
+      15      6    116      2      16 match_instance@25-40@src/v1.1-corregida/content_interpreter.c
+      11      3     71      2      12 ci_evaluate@42-53@src/v1.1-corregida/content_interpreter.c
+      23      7    185      4      25 validate_instance@11-35@src/v1.1-corregida/content_validator.c
+      14      4    105      3      15 cv_validate@37-51@src/v1.1-corregida/content_validator.c
+      12      3     66      3      13 copy_field@14-26@src/v1.1-corregida/channel_file.c
+      17      5    120      2      18 split_criteria@28-45@src/v1.1-corregida/channel_file.c
+      21      8    163      2      22 load_body@47-68@src/v1.1-corregida/channel_file.c
+      14      4     87      1      15 cf_load@70-84@src/v1.1-corregida/channel_file.c
+       4      1     13      1       4 cf_free@86-89@src/v1.1-corregida/channel_file.c
+      22      6    174      1      24 cmd_info@17-40@src/v1.1-corregida/main.c
+      12      2     68      1      13 cmd_validate@42-54@src/v1.1-corregida/main.c
+      17      3    126      3      20 run_event@56-75@src/v1.1-corregida/main.c
+      12      2     86      4      13 cmd_run@77-89@src/v1.1-corregida/main.c
+      11      5     84      4      12 parse_int@91-102@src/v1.1-corregida/main.c
+      17      6    176      5      18 parse_options@104-121@src/v1.1-corregida/main.c
+      28      7    232      2      29 main@123-151@src/v1.1-corregida/main.c
+      13      2    179      2      14 sensor_synthetic_event@19-32@src/v1.1-corregida/sensor_events.c
+      16      4    107      2      17 sensor_build_inputs@34-50@src/v1.1-corregida/sensor_events.c
+9 file analyzed.
+==============================================================
+NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
+--------------------------------------------------------------
+     40      12.3     4.7       92.3         3     src/v1.1-corregida/content_interpreter.c
+     41      18.5     5.5      145.0         2     src/v1.1-corregida/content_validator.c
+      9       0.0     0.0        0.0         0     src/v1.1-corregida/sensor_events.h
+     72      13.6     4.2       89.8         5     src/v1.1-corregida/channel_file.c
+      3       0.0     0.0        0.0         0     src/v1.1-corregida/content_validator.h
+      2       0.0     0.0        0.0         0     src/v1.1-corregida/content_interpreter.h
+    126      17.0     4.4      135.1         7     src/v1.1-corregida/main.c
+     15       0.0     0.0        0.0         0     src/v1.1-corregida/channel_file.h
+     37      14.5     3.0      143.0         2     src/v1.1-corregida/sensor_events.c
+
+===============================================================================================================
+No thresholds exceeded (cyclomatic_complexity > 15 or length > 1000 or nloc > 1000000 or parameter_count > 100)
+==========================================================================================
+Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
+------------------------------------------------------------------------------------------
+       345      15.3     4.4      118.3       19            0      0.00    0.00
+Duplicates
+===================================
+Total duplicate rate: 0.00%
+Total unique rate: 99.96%

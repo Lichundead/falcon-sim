@@ -1,0 +1,43 @@
+================================================
+  NLOC    CCN   token  PARAM  length  location  
+------------------------------------------------
+       7      3     61      2       8 pattern_match@11-18@src/v1.0-incidente/content_interpreter.c
+      13      4     83      1      14 match_instance@20-33@src/v1.0-incidente/content_interpreter.c
+       9      3     64      2      10 ci_evaluate@35-44@src/v1.0-incidente/content_interpreter.c
+      21      5    149      2      23 cv_validate@11-33@src/v1.0-incidente/content_validator.c
+      14      3     90      2      15 split_criteria@12-26@src/v1.0-incidente/channel_file.c
+      23      7    167      1      27 cf_load@28-54@src/v1.0-incidente/channel_file.c
+       4      1     13      1       4 cf_free@56-59@src/v1.0-incidente/channel_file.c
+      21      6    150      1      23 cmd_info@16-38@src/v1.0-incidente/main.c
+      10      2     46      1      11 cmd_validate@40-50@src/v1.0-incidente/main.c
+      20      3    155      4      23 cmd_run@52-74@src/v1.0-incidente/main.c
+      33     10    276      2      35 main@76-110@src/v1.0-incidente/main.c
+      12      2    127      2      13 sensor_synthetic_event@15-27@src/v1.0-incidente/sensor_events.c
+      10      2     77      2      11 sensor_build_inputs@29-39@src/v1.0-incidente/sensor_events.c
+       7      3     61      2       8 pattern_match@41-48@src/v1.0-incidente/sensor_events.c
+       5      2     33      2       5 sensor_filter@50-54@src/v1.0-incidente/sensor_events.c
+       6      1     45      1       7 sensor_log_event@56-62@src/v1.0-incidente/sensor_events.c
+9 file analyzed.
+==============================================================
+NLOC    Avg.NLOC  AvgCCN  Avg.token  function_cnt    file
+--------------------------------------------------------------
+     32       9.7     3.3       69.3         3     src/v1.0-incidente/content_interpreter.c
+     25      21.0     5.0      149.0         1     src/v1.0-incidente/content_validator.c
+     11       0.0     0.0        0.0         0     src/v1.0-incidente/sensor_events.h
+     45      13.7     3.7       90.0         3     src/v1.0-incidente/channel_file.c
+      2       0.0     0.0        0.0         0     src/v1.0-incidente/content_validator.h
+      2       0.0     0.0        0.0         0     src/v1.0-incidente/content_interpreter.h
+     91      21.0     5.2      156.8         4     src/v1.0-incidente/main.c
+     13       0.0     0.0        0.0         0     src/v1.0-incidente/channel_file.h
+     48       8.0     2.0       68.6         5     src/v1.0-incidente/sensor_events.c
+
+===============================================================================================================
+No thresholds exceeded (cyclomatic_complexity > 15 or length > 1000 or nloc > 1000000 or parameter_count > 100)
+==========================================================================================
+Total nloc   Avg.NLOC  AvgCCN  Avg.token   Fun Cnt  Warning cnt   Fun Rt   nloc Rt
+------------------------------------------------------------------------------------------
+       269      13.4     3.6       99.8       16            0      0.00    0.00
+Duplicates
+===================================
+Total duplicate rate: 0.00%
+Total unique rate: 100.00%

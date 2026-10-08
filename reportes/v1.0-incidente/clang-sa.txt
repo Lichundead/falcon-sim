@@ -1,0 +1,222 @@
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+src/v1.0-incidente/channel_file.c:17:5: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [security.insecureAPI.strcpy]
+   17 |     strcpy(inst->id, tok);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/channel_file.c:17:5: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+   17 |     strcpy(inst->id, tok);
+      |     ^~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/channel_file.c:23:9: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [security.insecureAPI.strcpy]
+   23 |         strcpy(inst->criteria[i], tok);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/channel_file.c:23:9: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+   23 |         strcpy(inst->criteria[i], tok);
+      |         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/channel_file.c:41:16: warning: Opened stream never closed. Potential resource leak [unix.Stream]
+   41 |         return NULL;
+      |                ^~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h:49:15: note: expanded from macro 'NULL'
+   49 | #define NULL  __DARWIN_NULL
+      |               ^~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:64:32: note: expanded from macro '__DARWIN_NULL'
+   64 | #define __DARWIN_NULL ((void *)0)
+      |                                ^
+src/v1.0-incidente/channel_file.c:31:15: note: Stream opened here
+   31 |     FILE *f = fopen(path, "r");
+      |               ^~~~~~~~~~~~~~~~
+src/v1.0-incidente/channel_file.c:31:15: note: Assuming that 'fopen' is successful
+   31 |     FILE *f = fopen(path, "r");
+      |               ^~~~~~~~~~~~~~~~
+src/v1.0-incidente/channel_file.c:34:9: note: 'f' is not equal to NULL
+   34 |     if (f == NULL)
+      |         ^
+src/v1.0-incidente/channel_file.c:34:5: note: Taking false branch
+   34 |     if (f == NULL)
+      |     ^
+src/v1.0-incidente/channel_file.c:40:5: note: Taking true branch
+   40 |     if (fgets(line, sizeof(line), f) == NULL)
+      |     ^
+src/v1.0-incidente/channel_file.c:41:16: note: Opened stream never closed. Potential resource leak
+   41 |         return NULL;
+      |                ^~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h:49:15: note: expanded from macro 'NULL'
+   49 | #define NULL  __DARWIN_NULL
+      |               ^~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:64:32: note: expanded from macro '__DARWIN_NULL'
+   64 | #define __DARWIN_NULL ((void *)0)
+      |                                ^
+src/v1.0-incidente/channel_file.c:41:16: warning: Potential leak of memory pointed to by 'cf' [unix.Malloc]
+   41 |         return NULL;
+      |                ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h:49:15: note: expanded from macro 'NULL'
+   49 | #define NULL  __DARWIN_NULL
+      |               ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:64:32: note: expanded from macro '__DARWIN_NULL'
+   64 | #define __DARWIN_NULL ((void *)0)
+      |                                ^
+src/v1.0-incidente/channel_file.c:34:9: note: 'f' is not equal to NULL
+   34 |     if (f == NULL)
+      |         ^
+src/v1.0-incidente/channel_file.c:34:5: note: Taking false branch
+   34 |     if (f == NULL)
+      |     ^
+src/v1.0-incidente/channel_file.c:37:10: note: Memory is allocated
+   37 |     cf = malloc(sizeof(channel_file_t));
+      |          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/channel_file.c:40:5: note: Taking true branch
+   40 |     if (fgets(line, sizeof(line), f) == NULL)
+      |     ^
+src/v1.0-incidente/channel_file.c:41:16: note: Potential leak of memory pointed to by 'cf'
+   41 |         return NULL;
+      |                ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_null.h:49:15: note: expanded from macro 'NULL'
+   49 | #define NULL  __DARWIN_NULL
+      |               ^
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types.h:64:32: note: expanded from macro '__DARWIN_NULL'
+   64 | #define __DARWIN_NULL ((void *)0)
+      |                                ^
+src/v1.0-incidente/channel_file.c:42:9: warning: Call to function 'sscanf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sscanf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   42 |     if (sscanf(line, "#template=%s fields=%d", cf->template_name,
+      |         ^~~~~~
+src/v1.0-incidente/channel_file.c:42:9: note: Call to function 'sscanf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'sscanf_s' in case of C11
+   42 |     if (sscanf(line, "#template=%s fields=%d", cf->template_name,
+      |         ^~~~~~
+5 warnings and 1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+src/v1.0-incidente/content_validator.c:22:13: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [security.insecureAPI.strcpy]
+   22 |             strcpy(reason, msg);
+      |             ^~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/content_validator.c:22:13: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+   22 |             strcpy(reason, msg);
+      |             ^~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+1 warning and 1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+src/v1.0-incidente/main.c:83:9: warning: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   83 |         fprintf(stderr, "uso: %s info|validate|run <channel_file> [opciones]\n", argv[0]);
+      |         ^~~~~~~
+src/v1.0-incidente/main.c:83:9: note: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+   83 |         fprintf(stderr, "uso: %s info|validate|run <channel_file> [opciones]\n", argv[0]);
+      |         ^~~~~~~
+src/v1.0-incidente/main.c:88:9: warning: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   88 |         fprintf(stderr, "no se pudo cargar %s\n", argv[2]);
+      |         ^~~~~~~
+src/v1.0-incidente/main.c:88:9: note: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+   88 |         fprintf(stderr, "no se pudo cargar %s\n", argv[2]);
+      |         ^~~~~~~
+2 warnings and 1 error generated.
+error: no analyzer checkers or packages are associated with 'alpha.security.ArrayBoundV2'
+note: use -analyzer-disable-all-checks to disable all static analyzer checkers
+src/v1.0-incidente/sensor_events.c:21:30: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   21 |     ev->seq = (unsigned long)rand();
+      |                              ^~~~
+src/v1.0-incidente/sensor_events.c:21:30: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   21 |     ev->seq = (unsigned long)rand();
+      |                              ^~~~
+src/v1.0-incidente/sensor_events.c:22:5: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [security.insecureAPI.strcpy]
+   22 |     strcpy(ev->pipe_name, PIPES[rand() % 4]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/sensor_events.c:22:5: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+   22 |     strcpy(ev->pipe_name, PIPES[rand() % 4]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/sensor_events.c:22:33: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   22 |     strcpy(ev->pipe_name, PIPES[rand() % 4]);
+      |                                 ^~~~
+src/v1.0-incidente/sensor_events.c:22:33: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   22 |     strcpy(ev->pipe_name, PIPES[rand() % 4]);
+      |                                 ^~~~
+src/v1.0-incidente/sensor_events.c:23:5: warning: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119 [security.insecureAPI.strcpy]
+   23 |     strcpy(ev->process, PROCS[rand() % 4]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/sensor_events.c:23:5: note: Call to function 'strcpy' is insecure as it does not provide bounding of the memory buffer. Replace unbounded copy functions with analogous functions that support length arguments such as 'strlcpy'. CWE-119
+   23 |     strcpy(ev->process, PROCS[rand() % 4]);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:249:21: note: expanded from macro 'strcpy'
+  249 | #define strcpy(...) __strcpy_chk_func (__VA_ARGS__)
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h:172:3: note: expanded from macro '__strcpy_chk_func'
+  172 |                 __builtin___strcpy_chk (dest, __VA_ARGS__, __darwin_obsz (dest))
+      |                 ^~~~~~~~~~~~~~~~~~~~~~
+src/v1.0-incidente/sensor_events.c:23:31: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   23 |     strcpy(ev->process, PROCS[rand() % 4]);
+      |                               ^~~~
+src/v1.0-incidente/sensor_events.c:23:31: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   23 |     strcpy(ev->process, PROCS[rand() % 4]);
+      |                               ^~~~
+src/v1.0-incidente/sensor_events.c:24:33: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   24 |     sprintf(ev->user, "user%d", rand() % 100);
+      |                                 ^~~~
+src/v1.0-incidente/sensor_events.c:24:33: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   24 |     sprintf(ev->user, "user%d", rand() % 100);
+      |                                 ^~~~
+src/v1.0-incidente/sensor_events.c:26:51: warning: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead [security.insecureAPI.rand]
+   26 |         sprintf(ev->fields[i], "v%02d_%d", i + 1, rand() % 10);
+      |                                                   ^~~~
+src/v1.0-incidente/sensor_events.c:26:51: note: Function 'rand' is obsolete because it implements a poor random number generator.  Use 'arc4random' instead
+   26 |         sprintf(ev->fields[i], "v%02d_%d", i + 1, rand() % 10);
+      |                                                   ^~~~
+src/v1.0-incidente/sensor_events.c:61:5: warning: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11 [security.insecureAPI.DeprecatedOrUnsafeBufferHandling]
+   61 |     fprintf(stderr, "%s\n", line);
+      |     ^~~~~~~
+src/v1.0-incidente/sensor_events.c:61:5: note: Call to function 'fprintf' is insecure as it does not provide bounding of the memory buffer or security checks introduced in the C11 standard. Replace with analogous functions that support length arguments or provides boundary checks such as 'fprintf_s' in case of C11
+   61 |     fprintf(stderr, "%s\n", line);
+      |     ^~~~~~~
+8 warnings and 1 error generated.
