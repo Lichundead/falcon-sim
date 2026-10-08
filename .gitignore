@@ -1,0 +1,7 @@
+.venv/
+build/
+*.profraw
+reportes/*/cov/
+__pycache__/
+.pytest_cache/
+.DS_Store

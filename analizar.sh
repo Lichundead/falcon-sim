@@ -16,7 +16,7 @@ analizar() {
 
   echo "== 1. Compilación (AddressSanitizer + cobertura)"
   clang -g -O0 -std=c11 -fsanitize=address -fno-omit-frame-pointer \
-        -fprofile-instr-generate -fcoverage-mapping -Wno-deprecated-declarations \
+        -fprofile-instr-generate -fcoverage-mapping -fcoverage-compilation-dir=. -Wno-deprecated-declarations \
         "$SRC"/*.c -o "$B/falcon_sim" || return 1
 
   echo "== 2. Cppcheck $(cppcheck --version | cut -d' ' -f2) (reglas propias + MISRA C 2012)"
@@ -46,7 +46,7 @@ analizar() {
   ${LLVM}llvm-profdata merge -sparse "$R"/cov/*.profraw -o "$R/cov/falcon.profdata"
   ${LLVM}llvm-cov report "$B/falcon_sim" -instr-profile="$R/cov/falcon.profdata" "$SRC"/*.c > "$R/cobertura.txt"
   ${LLVM}llvm-cov show "$B/falcon_sim" -instr-profile="$R/cov/falcon.profdata" \
-        -format=html -output-dir="$R/cobertura-html" "$SRC"/*.c
+        -format=html -output-dir="$R/cobertura-html"
   rm -f "$R"/cov/*.profraw
 }
 
